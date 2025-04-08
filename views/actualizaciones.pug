@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Formulario Estudiante
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Crear nuevo estudiante
+
+    form(action="/update-cobj", method="POST")
+      label(for="Nombre") Nombre:
+      input(type="text", name="Nombre", required)
+
+      label(for="Carrera") Carrera:
+      input(type="text", name="Carrera", required)
+
+      label(for="numero_de_telefono") Número de teléfono:
+      input(type="text", name="numero_de_telefono", required)
+
+      button(type="submit") Crear estudiante
+
+    br
+    a(href="/") Volver al inicio

@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Estudiantes
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Estudiantes
+    a(href="/update-cobj") ➕ Añadir nuevo estudiante
+
+    table
+      thead
+        tr
+          th Nombre
+          th Carrera
+          th Número de Teléfono
+      tbody
+        each estudiante in estudiantes
+          tr
+            td= estudiante.properties.nombre
+            td= estudiante.properties.carrera
+            td= estudiante.properties.numero_de_telefono
+
+
