@@ -37,8 +37,8 @@ app.get('/update-cobj', (req, res) => {
 });
 
 app.post('/update-cobj', async (req, res) => {
-    const { nombre, carrera, numero_de_telefono } = req.body;
-    const url = 'https://api.hubapi.com/crm/v3/objects/p49645532_estudiantes';
+    const {nombre, carrera, numero_de_telefono} = req.body;
+    const url = 'https://api.hubapi.com/crm/v3/objects/p49645532_estudiantes?properties=nombre,carrera,numero_de_telefono';
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
